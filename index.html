@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Local Weather Viewer</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <section class="rain"></section>
+<section class="sun"></section>
+<section class="night"></section>
+
+<section class="info">
+    <div class="container">
+
+    <div class="weather">
+      it is <span id="weather">loading...</span>
+    </div>
+
+    <div class="location">
+      in <span id="city">somewhere</span>, <span id="region">USA</span>
+    </div>
+      
+    <div class="temp">
+      <span id="temp">70</span>°<span id="temp-unit">F</span>
+    </div>
+      
+    <input type="button" onclick="changeUnits(this)" id="temp-changer" value="view in °C"></button>
+
+  </div>
+</section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #263248;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 50%;
+  margin: 20vh auto;
+  min-width: 450px;
+  padding: 20px 0px 20px 0px;
+  z-index: 10;
+  position: relative;
+  text-align: center;
+}
+
+.weather {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4em;
+  font-weight: 900;
+}
+
+.location {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.temp {
+  padding: 10px 0px 0px 0px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+#temp-changer {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 900;
+}
+
+#temp-changer:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#temp-changer:active {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translate(80px, 100vh);
+  }
+}
+@keyframes snow {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+@keyframes sun {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(200px);
+  }
+}
+@keyframes twinkle {
+  0% {
+    transform: scale(0.15);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+.moon {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 75vh;
+  left: 75%;
+  border-radius: 50%;
+  box-shadow: inset 30px 0px #fff;
+  transform: rotate(-20deg);
+}
+
+.drop {
+  background-color: #ffffff;
+  width: 5px;
+  height: 5px;
+  border-radius: 0% 50% 50% 50%;
+  transform: rotate(45deg);
+  position: absolute;
+  display: inline-block;
+  animation: rain linear infinite;
+  animation-duration: 2s;
+}
+
+.star {
+  background-color: #ffffff;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: rain linear infinite;
+  animation-duration: 2s;
+}
+
+.rain {
+  z-index: -999;
+}
+
+.sun {
+  width: 100%;
+}
+
+.bg {
+  background-color: red;
+  background: linear-gradient(red, #FF9800);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sun ease infinite alternate;
+  animation-duration: 5s;
+}
