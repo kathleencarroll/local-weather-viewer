@@ -59,29 +59,93 @@ body {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+/** RAIN ANIMATION **/
+@-webkit-keyframes rain {
+  0% { -webkit-transform: translateY(0vh); }
+  100% { -webkit-transform: translate(80px, 100vh); }
+}
+@-moz-keyframes rain {
+  0% { -moz-transform: translateY(0vh); }
+  100% { -moz-transform: translate(80px, 100vh); }
+}
+@-o-keyframes rain {
+  0% { -o-transform: translateY(0vh); }
+  100% { -o-transform: translate(80px, 100vh); }
+}
 @keyframes rain {
-  0% {
-    transform: translateY(0vh);
-  }
-  100% {
-    transform: translate(80px, 100vh);
-  }
+  0% { transform: translateY(0vh); }
+  100% { transform: translate(80px, 100vh); }
+}
+
+/** SNOW ANIMATION **/
+@-webkit-keyframes snow {
+  0% { -webkit-transform: translateY(0vh); }
+  100% { -webkit-transform: translateY(100vh); }
+}
+@-moz-keyframes snow {
+  0% { -moz-transform: translateY(0vh); }
+  100% { -moz-transform: translateY(100vh); }
+}
+@-o-keyframes snow {
+  0% { -o-transform: translateY(0vh); }
+  100% { -o-transform: translateY(100vh); }
 }
 @keyframes snow {
-  0% {
-    transform: translateY(0vh);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
+  0% { transform: translateY(0vh); }
+  100% { transform: translateY(100vh); }
+}
+
+/** SUN ANIMATION **/
+@-webkit-keyframes sun {
+  0% { -webkit-transform: translateY(0px); }
+  100% { -webkit-transform: translateY(200px); }
+}
+@-moz-keyframes sun {
+  0% { -moz-transform: translateY(0px); }
+  100% { -moz-transform: translateY(200px); }
+}
+@-o-keyframes sun {
+  0% { -o-transform: translateY(0px); }
+  100% { -o-transform: translateY(200px); }
 }
 @keyframes sun {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(200px); }
+}
+
+/** NIGHT ANIMATIONS **/
+@-webkit-keyframes twinkle {
   0% {
-    transform: translateY(0px);
+    -webkit-transform: scale(0.15);
+    opacity: 0;
   }
-  100% {
-    transform: translateY(200px);
+  50% {
+    -webkit-transform: scale(0.3);
+    opacity: 1;
   }
+  100% { -webkit-transform: scale(0.1); }
+}
+@-moz-keyframes twinkle {
+  0% {
+    -moz-transform: scale(0.15);
+    opacity: 0;
+  }
+  50% {
+    -moz-transform: scale(0.3);
+    opacity: 1;
+  }
+  100% { -moz-transform: scale(0.1); }
+}
+@-o-keyframes twinkle {
+  0% {
+    -o-transform: scale(0.15);
+    opacity: 0;
+  }
+  50% {
+    -o-transform: scale(0.3);
+    opacity: 1;
+  }
+  100% { -o-transform: scale(0.1); }
 }
 @keyframes twinkle {
   0% {
@@ -96,6 +160,7 @@ body {
     transform: scale(0.1);
   }
 }
+
 .moon {
   width: 100px;
   height: 100px;
@@ -144,6 +209,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+
+  -webkit-animation: sun ease infinite alternate;
+  -moz-animation: sun ease infinite alternate;
+  -o-animation: sun ease infinite alternate;
   animation: sun ease infinite alternate;
+
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
   animation-duration: 5s;
 }
